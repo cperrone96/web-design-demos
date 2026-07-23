@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Green Horizons Landscaping Austin, TX</title>
+  <meta name="description" content="Get in touch with Green Horizons for a free landscaping consultation and estimate. Serving Austin, TX and surrounding areas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--scrolled" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+        </div>
+        <span class="nav__logo-text">Green Horizons</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="service-area.html">Service Area</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" style="color:var(--color-accent);">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="contact.html" class="btn btn--primary nav__cta">Request a Quote</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="faq.html">FAQ</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-top-offset"></div>
+  <section class="section" style="background: var(--color-bg-2); padding: 4rem 0 3rem;">
+    <div class="container text-center">
+      <span class="eyebrow">Reach Out</span>
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); color: var(--color-primary);">Let's Talk About Your Property</h1>
+      <p class="section-intro mt-2">Whether you're ready to book or just exploring your options, we'd love to hear from you. We respond to all inquiries within one business day.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT LAYOUT -->
+  <section class="section" style="padding-top: 3rem;">
+    <div class="container">
+      <div class="contact-layout reveal">
+
+        <!-- FORM -->
+        <div>
+          <h2 style="font-size: 1.75rem; color: var(--color-primary); margin-bottom: 2rem;">Request a Free Estimate</h2>
+          <form action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Sarah" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Mitchell" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="sarah@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(512) 555-0000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service...</option>
+                <option value="lawn-maintenance">Lawn Maintenance</option>
+                <option value="landscape-design">Landscape Design</option>
+                <option value="hardscaping">Hardscaping</option>
+                <option value="irrigation">Irrigation Systems</option>
+                <option value="seasonal-cleanup">Seasonal Cleanup</option>
+                <option value="tree-shrub">Tree &amp; Shrub Care</option>
+                <option value="sod">Sod Installation</option>
+                <option value="lawn-treatment">Lawn Treatments</option>
+                <option value="not-sure">Not Sure — Please Advise</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="property-size">Approximate Property Size</label>
+              <select id="property-size" name="property_size">
+                <option value="" disabled selected>Select property size...</option>
+                <option value="small">Under 5,000 sq ft</option>
+                <option value="medium">5,000 – 10,000 sq ft</option>
+                <option value="large">10,000 – 20,000 sq ft</option>
+                <option value="xlarge">Over 20,000 sq ft / Acreage</option>
+                <option value="commercial">Commercial Property</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project</label>
+              <textarea id="message" name="message" placeholder="Describe your lawn or landscape goals, any specific concerns, or questions you have. The more detail, the better!"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">
+              Send My Request
+            </button>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; text-align: center;">We'll respond within 1 business day. No spam, ever.</p>
+          </form>
+        </div>
+
+        <!-- INFO PANEL -->
+        <div>
+          <div style="background: var(--color-bg-2); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-primary); margin-bottom: 2rem;">Contact Information</h3>
+
+            <div class="contact-info-block">
+              <div class="contact-info-block__label">Phone</div>
+              <div class="contact-info-block__value">(512) 555-0142</div>
+              <div class="contact-info-block__sub">Call or text — we're responsive</div>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-block__label">Email</div>
+              <div class="contact-info-block__value">hello@greenhorizons.com</div>
+              <div class="contact-info-block__sub">Replies within 1 business day</div>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-block__label">Business Hours</div>
+              <div class="contact-info-block__value">Mon – Sat: 7:00 AM – 6:00 PM</div>
+              <div class="contact-info-block__sub">Closed Sundays</div>
+            </div>
+
+            <div class="contact-info-block">
+              <div class="contact-info-block__label">Service Area</div>
+              <div class="contact-info-block__value">Austin Metro Area</div>
+              <div class="contact-info-block__sub">Up to 25-mile radius from downtown Austin</div>
+            </div>
+          </div>
+
+          <div style="background: var(--color-primary); border-radius: var(--radius-lg); padding: 2rem;">
+            <h4 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; font-size: 1.15rem;">What Happens Next?</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.875rem;">
+              <li style="display: flex; gap: 0.875rem; align-items: flex-start;">
+                <span style="width: 26px; height: 26px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 1px;">1</span>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.5;">We review your request and contact you to confirm details.</span>
+              </li>
+              <li style="display: flex; gap: 0.875rem; align-items: flex-start;">
+                <span style="width: 26px; height: 26px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 1px;">2</span>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.5;">We schedule a free on-site consultation at your convenience.</span>
+              </li>
+              <li style="display: flex; gap: 0.875rem; align-items: flex-start;">
+                <span style="width: 26px; height: 26px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 1px;">3</span>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.5;">You receive a clear, itemized estimate — no hidden fees.</span>
+              </li>
+              <li style="display: flex; gap: 0.875rem; align-items: flex-start;">
+                <span style="width: 26px; height: 26px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 1px;">4</span>
+                <span style="font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.5;">Work begins — often as soon as the same week.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section class="section--sm" style="background: var(--color-bg-2);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 2rem;">
+        <span class="eyebrow">Coverage Area</span>
+        <h2>Austin Metro Area &middot; 25-Mile Radius</h2>
+        <p class="section-intro mt-2">We serve all neighborhoods within 25 miles of downtown Austin. Not sure if you're in range? Just ask — we may be able to accommodate.</p>
+      </div>
+      <div class="map-placeholder reveal">
+        <div class="map-placeholder__pin"></div>
+        <h3 style="font-family: var(--font-heading); color: var(--color-primary); font-size: 1.35rem; margin-bottom: 0.75rem;">Austin Metro Service Zone</h3>
+        <p style="max-width: 480px; margin: 0 auto 1.5rem; font-size: 0.95rem;">Covering Austin, Round Rock, Cedar Park, Pflugerville, Georgetown, Leander, Buda, Kyle, Dripping Springs, and more.</p>
+        <a href="service-area.html" class="btn btn--outline-dark">View Full Service Area</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-items reveal">
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          Free Estimates Always
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          Same-Week Service Available
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          Satisfaction Guaranteed
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="nav__logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+            </div>
+            <span class="footer__logo-text">Green Horizons</span>
+          </div>
+          <p class="footer__tagline">Austin's trusted landscaping and lawn care team — crafting beautiful, sustainable outdoor spaces since 2013.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Pages</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Our Work</a></li>
+            <li><a href="lawn-care.html">Lawn Maintenance</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Info</div>
+          <ul class="footer__links">
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Free Estimate</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (512) 555-0142
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@greenhorizons.com
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Austin, TX &mdash; Serving 25-mile radius
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2026 Green Horizons &middot; Demo site by <a href="#">Data Design Dynamics</a></div>
+        <div class="footer__copyright">Licensed &amp; Insured &middot; Austin, TX</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      mobileMenu.classList.toggle('is-open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        mobileMenu.classList.remove('is-open');
+      });
+    });
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

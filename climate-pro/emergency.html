@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 Emergency HVAC Service Austin TX — Climate Control Pro</title>
+  <meta name="description" content="24/7 emergency HVAC service in Austin TX. AC out? No heat? We answer every call, day or night. Response in 2 hours or less. Call (512) 555-4822.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(224,100,32,0.7); }
+      70%       { box-shadow: 0 0 0 15px rgba(224,100,32,0); }
+    }
+    .btn--call-now {
+      animation: pulse 1.8s ease-out infinite;
+      font-size: 1.3rem;
+      padding: 22px 52px;
+      border-radius: 8px;
+      letter-spacing: 0.04em;
+    }
+    .emergency-phone {
+      font-family: var(--font-heading);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .guarantee-box {
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 24px 32px;
+      display: inline-block;
+      margin: 32px 0;
+    }
+    .guarantee-box .guarantee-text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .guarantee-box .guarantee-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="demo-banner">Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a></div>
+
+<nav class="nav" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/><path d="M16 4v24M4 16h24M8 8l16 16M24 8L8 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+      <div class="nav__logo-sub"><span class="nav__logo-name">Climate Control Pro</span><span class="nav__logo-tag">Austin HVAC Experts</span></div>
+    </a>
+    <div class="nav__links">
+      <a href="services.html" class="nav__link">Services</a><a href="about.html" class="nav__link">About</a>
+      <a href="maintenance.html" class="nav__link">Maintenance</a>
+      <a href="financing.html" class="nav__link">Financing</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <a href="tel:5125554822" class="nav__emergency">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+      (512) 555-HVAC
+    </a>
+    <a href="booking.html" class="btn btn--primary nav__cta">Schedule Service</a>
+    <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobileMenu">
+  <a href="services.html" class="nav__link">Services</a>
+  <a href="maintenance.html" class="nav__link">Maintenance Plans</a>
+  <a href="financing.html" class="nav__link">Financing</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+  <a href="tel:5125554822" class="nav__emergency"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>Call (512) 555-HVAC</a>
+  <a href="booking.html" class="btn btn--primary">Schedule Service</a>
+</div>
+
+<!-- Emergency Hero — full bleed, urgency first -->
+<section class="hero hero--emergency page-offset">
+  <div class="hero__bg" style="background-image: url('assets/images/hvac/hvac-emergency-home-night.jpg');" role="img" aria-label="24/7 emergency HVAC service — Climate Control Pro responds day and night"></div>
+  <div class="hero__overlay"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div style="text-align:center;max-width:860px;margin:0 auto;padding:60px 0;">
+      <span class="eyebrow eyebrow--light" style="font-size:0.9rem;letter-spacing:0.18em;">24 Hours a Day &bull; 7 Days a Week &bull; Austin &amp; Surrounding Areas</span>
+      <span class="emergency-phone" style="margin-top:16px;">(512) 555-4822</span>
+      <h1 style="color:#fff;margin-bottom:8px;">We Answer Day or Night.</h1>
+      <p style="color:rgba(255,255,255,0.88);font-size:1.2rem;max-width:600px;margin:0 auto 12px;">No voicemail. No answering service. A real Climate Control Pro technician picks up every call — midnight, holidays, weekends, all of it.</p>
+
+      <div class="guarantee-box">
+        <div class="guarantee-text">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E06420" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+          We'll Be There in 2 Hours or Less — Guaranteed
+        </div>
+        <div class="guarantee-sub">If we don't arrive within 2 hours of your emergency call, your service call fee is waived.</div>
+      </div>
+
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+        <a href="tel:5125554822" class="btn btn--primary btn--call-now">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="phone-ring"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          CALL NOW
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What Counts as an Emergency -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="gap:56px;align-items:start;">
+      <div class="reveal">
+        <span class="eyebrow">Don't Wait</span>
+        <h2>What Counts as an HVAC Emergency?</h2>
+        <div class="divider"></div>
+        <p class="text-muted" style="margin-bottom:20px;">Any of these situations qualifies for our 24/7 emergency line. Don't wait until morning — call us now.</p>
+        <ul class="checklist" style="gap:16px;">
+          <li class="checklist__item" style="font-size:1rem;font-weight:500;">
+            <div class="checklist__icon" style="background:rgba(224,100,32,.15);color:var(--color-accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+            No AC during Austin summer heat — especially with elderly or young children
+          </li>
+          <li class="checklist__item" style="font-size:1rem;font-weight:500;">
+            <div class="checklist__icon" style="background:rgba(224,100,32,.15);color:var(--color-accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+            No heat during a winter cold snap — temperatures below 40°F
+          </li>
+          <li class="checklist__item" style="font-size:1rem;font-weight:500;">
+            <div class="checklist__icon" style="background:rgba(224,100,32,.15);color:var(--color-accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+            Smell of gas near your furnace or HVAC equipment
+          </li>
+          <li class="checklist__item" style="font-size:1rem;font-weight:500;">
+            <div class="checklist__icon" style="background:rgba(224,100,32,.15);color:var(--color-accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+            Active water leak from your air handler or condensate system
+          </li>
+          <li class="checklist__item" style="font-size:1rem;font-weight:500;">
+            <div class="checklist__icon" style="background:rgba(224,100,32,.15);color:var(--color-accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+            Burning smell, sparks, or electrical issues from HVAC equipment
+          </li>
+          <li class="checklist__item" style="font-size:1rem;font-weight:500;">
+            <div class="checklist__icon" style="background:rgba(224,100,32,.15);color:var(--color-accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+            Complete system failure — system won't start at all
+          </li>
+        </ul>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div style="background:var(--color-accent);border-radius:var(--radius-lg);padding:40px;color:#fff;text-align:center;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin:0 auto 16px;display:block;opacity:0.9;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          <div style="font-family:var(--font-heading);font-size:2.6rem;font-weight:700;line-height:1;margin-bottom:8px;">(512) 555-4822</div>
+          <div style="font-size:1.1rem;font-weight:700;margin-bottom:8px;">Emergency HVAC Line</div>
+          <div style="opacity:0.85;font-size:0.9rem;line-height:1.6;margin-bottom:24px;">Answered by a live technician<br>24 hours a day, 7 days a week<br>No hold. No voicemail. No wait.</div>
+          <a href="tel:5125554822" class="btn btn--white btn--lg" style="width:100%;justify-content:center;">Call Now</a>
+        </div>
+        <div style="background:var(--color-bg-2);border-radius:var(--radius-lg);padding:24px;margin-top:20px;">
+          <div style="font-weight:700;color:var(--color-primary);margin-bottom:8px;">Gas Smell? Act First.</div>
+          <p style="font-size:0.875rem;color:var(--color-text-muted);margin:0;">If you smell gas: leave the house immediately, don't flip any switches, and call your gas provider from outside. Once cleared, call us for emergency heating service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3-Step Process -->
+<section class="section section--off">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>From Your Call to Problem Solved</h2>
+      <div class="divider divider--center"></div>
+    </div>
+    <div class="process-steps reveal">
+      <div class="step">
+        <div class="step__number" style="background:var(--color-accent);">1</div>
+        <div class="step__title">You Call</div>
+        <div class="step__desc">Dial (512) 555-4822. A live technician answers immediately. Tell us your problem and address — no lengthy intake forms.</div>
+      </div>
+      <div class="step">
+        <div class="step__number" style="background:var(--color-accent);">2</div>
+        <div class="step__title">We Dispatch</div>
+        <div class="step__desc">The nearest available tech is dispatched with a fully stocked service vehicle. You'll get a text with their name, photo, and ETA.</div>
+      </div>
+      <div class="step">
+        <div class="step__number" style="background:var(--color-accent);">3</div>
+        <div class="step__title">Problem Solved</div>
+        <div class="step__desc">We diagnose, provide a written estimate, and make the repair — usually in a single visit. Most emergency calls are resolved within 90 minutes of arrival.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Area Note -->
+<section class="section">
+  <div class="container container--narrow" style="text-align:center;">
+    <div class="reveal">
+      <span class="eyebrow">Coverage Area</span>
+      <h2>Serving Greater Austin — 24/7</h2>
+      <div class="divider divider--center"></div>
+      <p class="text-muted">Our emergency service covers Austin and all surrounding communities including Round Rock, Cedar Park, Pflugerville, Georgetown, Kyle, Buda, Leander, Hutto, and Manor. If you're in the greater Austin metro, we can reach you in 2 hours or less.</p>
+      <p class="text-muted">Not sure if we cover your area? Call us — if we can't get to you, we'll help you find someone who can.</p>
+      <a href="service-area.html" class="btn btn--outline-dark" style="margin-top:12px;">See Full Service Area Map</a>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA — repeat the phone number large -->
+<div style="background:var(--color-bg-dark);padding:80px 0;text-align:center;">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Still Waiting?</span>
+    <div style="font-family:var(--font-heading);font-size:clamp(2.2rem,6vw,4.5rem);font-weight:700;color:#fff;margin:12px 0 8px;line-height:1;">(512) 555-4822</div>
+    <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;margin-bottom:32px;">Every minute counts when your AC is out in Austin heat.<br>We answer. We come. We fix it.</p>
+    <a href="tel:5125554822" class="btn btn--primary btn--xl btn--pulse">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="phone-ring"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+      Call Emergency Line Now
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3>Climate Control Pro</h3>
+        <p>Austin's most trusted HVAC company since 2009. We keep families comfortable year-round with expert heating, cooling, and air quality services.</p>
+        <div class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg><a href="tel:5125554822">(512) 555-4822</a></div>
+        <div class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:service@climatepro.com">service@climatepro.com</a></div>
+        <div class="footer__license">License: TACL B123456C</div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <div class="footer__links">
+          <a href="ac-repair.html">AC Repair</a>
+          <a href="installation.html">AC Installation</a>
+          <a href="heating.html">Heating Repair</a>
+          <a href="maintenance.html">Maintenance Plans</a>
+          <a href="services.html">Indoor Air Quality</a>
+          <a href="emergency.html">Emergency Service</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="services.html">All Services</a>
+          <a href="financing.html">Financing</a>
+          <a href="testimonials.html">Reviews</a>
+          <a href="seasonal-specials.html">Special Offers</a>
+          <a href="blog.html">Blog &amp; Tips</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Resources</div>
+        <div class="footer__links">
+          <a href="booking.html">Book a Service</a>
+          <a href="faq.html">FAQ</a>
+          <a href="service-area.html">Service Area</a>
+          <a href="seasonal-specials.html">Current Specials</a>
+          <a href="emergency.html">24/7 Emergency</a>
+          <a href="financing.html">Apply for Financing</a>
+        </div>
+        <div style="margin-top:24px;">
+          <div class="footer__col-title">Hours</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.9;">Mon–Fri: 7am – 7pm<br>Saturday: 8am – 5pm<br><span style="color:var(--color-accent);font-weight:600;">Emergency: 24/7</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Climate Control Pro. All rights reserved.</span>
+      <span>Demo site built by <a href="#">Data Design Dynamics</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  const h=document.getElementById('hamburger'),m=document.getElementById('mobileMenu');
+  h.addEventListener('click',()=>{h.classList.toggle('is-active');m.classList.toggle('is-open');});
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible');}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

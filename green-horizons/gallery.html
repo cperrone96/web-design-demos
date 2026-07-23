@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work — Green Horizons Landscaping Austin, TX</title>
+  <meta name="description" content="Browse our portfolio of residential and commercial landscaping projects across Austin, TX. See real before and after transformations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--scrolled" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+        </div>
+        <span class="nav__logo-text">Green Horizons</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" style="color:var(--color-accent);">Gallery</a></li>
+        <li><a href="service-area.html">Service Area</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="contact.html" class="btn btn--primary nav__cta">Request a Quote</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="faq.html">FAQ</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero--short">
+    <div class="hero__bg">
+      <img src="assets/images/landscaping/landscaping-portfolio-gallery-hero.jpg" alt="Green Horizons landscaping portfolio Austin TX" loading="eager" fetchpriority="high" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">Portfolio</span>
+      <h1 class="hero__title animate-fade-in">Our Work</h1>
+      <p class="hero__subtitle animate-fade-in animate-delay-1">Every project tells a story. Browse our portfolio of residential gardens, commercial grounds, and dramatic landscape transformations across Austin and the Hill Country.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Project Gallery</span>
+        <h2>Recent Projects</h2>
+        <p class="section-intro mt-2">Filter by project type to find the inspiration you're looking for.</p>
+      </div>
+
+      <div class="filter-tabs reveal">
+        <button class="filter-tab is-active" data-filter="all">All Projects</button>
+        <button class="filter-tab" data-filter="residential">Residential</button>
+        <button class="filter-tab" data-filter="commercial">Commercial</button>
+        <button class="filter-tab" data-filter="before-after">Before &amp; After</button>
+      </div>
+
+      <div class="gallery-grid reveal" id="galleryGrid">
+
+        <div class="gallery-item" data-type="residential">
+          <img src="assets/images/landscaping/front-yard-landscaping-curb-appeal.jpg" alt="Front yard landscaping and curb appeal improvement — Barton Hills Austin" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Barton Hills Estate</div>
+            <div class="gallery-item__tag">Residential &middot; Full Landscape Design</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="residential">
+          <img src="assets/images/landscaping/garden-path-walkway-stone-design.jpg" alt="Garden path and stone walkway design installation" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Westlake Garden Path</div>
+            <div class="gallery-item__tag">Residential &middot; Hardscaping</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="commercial">
+          <img src="assets/images/landscaping/commercial-landscape-office-property.jpg" alt="Commercial property landscaping and grounds maintenance" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Domain Office Complex</div>
+            <div class="gallery-item__tag">Commercial &middot; Grounds Management</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="residential">
+          <img src="assets/images/landscaping/backyard-transformation-before-after.jpg" alt="Backyard transformation with garden and lawn renovation" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Travis Heights Backyard</div>
+            <div class="gallery-item__tag">Residential &middot; Backyard Renovation</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="before-after">
+          <img src="assets/images/landscaping/overgrown-yard-before-renovation.jpg" alt="Overgrown yard before landscaping renovation — before photo" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Cedar Park Transformation</div>
+            <div class="gallery-item__tag">Before &amp; After &middot; Full Lawn Renovation</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="commercial">
+          <img src="assets/images/landscaping/retail-property-parking-landscaping.jpg" alt="Retail property parking area landscaping and maintenance" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">South Congress Retail Strip</div>
+            <div class="gallery-item__tag">Commercial &middot; Landscape Maintenance</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="residential">
+          <img src="assets/images/landscaping/lawn-mowing-stripes-green.jpg" alt="Lawn mowing with clean stripes — professional lawn care result" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Round Rock Family Home</div>
+            <div class="gallery-item__tag">Residential &middot; Weekly Maintenance</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="before-after">
+          <img src="assets/images/landscaping/garden-redesign-flowers-colorful.jpg" alt="Garden redesign with colorful flowering plants and fresh mulch" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Pflugerville Garden Overhaul</div>
+            <div class="gallery-item__tag">Before &amp; After &middot; Full Redesign</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-type="residential">
+          <img src="assets/images/landscaping/outdoor-space-patio-furniture.jpg" alt="Outdoor living space with patio and professional landscaping" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__title">Lakeway Lakeside Property</div>
+            <div class="gallery-item__tag">Residential &middot; Native Plantings</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="section" style="background: var(--color-bg-2);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Transformations</span>
+        <h2>Before &amp; After</h2>
+        <p class="section-intro mt-2">See the dramatic difference a professional landscape team makes. These are real Austin-area properties we've transformed.</p>
+      </div>
+
+      <div class="before-after-grid reveal">
+        <div class="before-after-item">
+          <div class="before-after-item__imgs">
+            <img src="assets/images/landscaping/lawn-before-neglected-weeds.jpg" alt="Before photo — neglected lawn with weeds and bare patches" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+            <img src="assets/images/landscaping/lawn-after-manicured-green.jpg" alt="After photo — lush green manicured lawn by Green Horizons" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div class="before-after-label before-after-label--before">Before</div>
+            <div class="before-after-label before-after-label--after">After</div>
+          </div>
+          <div style="padding: 1.25rem 1.5rem; background: #fff;">
+            <strong style="font-size:0.95rem;color:var(--color-primary);font-family:var(--font-heading);">Hyde Park Front Yard</strong>
+            <p style="font-size:0.825rem;margin-top:0.3rem;">Removed dead grass, redesigned planting beds, installed native drought-tolerant plants and fresh sod.</p>
+          </div>
+        </div>
+
+        <div class="before-after-item">
+          <div class="before-after-item__imgs">
+            <img src="assets/images/landscaping/garden-before-overgrown-weeds.jpg" alt="Before photo — overgrown garden and neglected flower beds" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+            <img src="assets/images/landscaping/garden-after-beautiful-maintained.jpg" alt="After photo — beautiful maintained garden with fresh plantings" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div class="before-after-label before-after-label--before">Before</div>
+            <div class="before-after-label before-after-label--after">After</div>
+          </div>
+          <div style="padding: 1.25rem 1.5rem; background: #fff;">
+            <strong style="font-size:0.95rem;color:var(--color-primary);font-family:var(--font-heading);">Georgetown Backyard</strong>
+            <p style="font-size:0.825rem;margin-top:0.3rem;">Converted overgrown, unusable space into a fully landscaped backyard oasis with paver patio and garden beds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-section__bg">
+      <img src="assets/images/landscaping/landscaping-evening-yard-twilight.jpg" alt="Beautiful landscaped yard in evening light" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+    </div>
+    <div class="cta-section__overlay"></div>
+    <div class="container">
+      <div class="cta-section__content reveal">
+        <span class="eyebrow eyebrow--light">Start Your Project</span>
+        <h2>Ready to Create Something Beautiful?</h2>
+        <p>Let's talk about your property and what's possible. Free consultations, no obligation.</p>
+        <div class="btn-group flex-center">
+          <a href="contact.html" class="btn btn--primary btn--lg">Request a Free Quote</a>
+          <a href="services.html" class="btn btn--outline btn--lg">View All Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="nav__logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+            </div>
+            <span class="footer__logo-text">Green Horizons</span>
+          </div>
+          <p class="footer__tagline">Austin's trusted landscaping and lawn care team — crafting beautiful, sustainable outdoor spaces since 2013.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Pages</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Our Work</a></li>
+            <li><a href="lawn-care.html">Lawn Maintenance</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Info</div>
+          <ul class="footer__links">
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Free Estimate</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (512) 555-0142
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@greenhorizons.com
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Austin, TX &mdash; Serving 25-mile radius
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2026 Green Horizons &middot; Demo site by <a href="#">Data Design Dynamics</a></div>
+        <div class="footer__copyright">Licensed &amp; Insured &middot; Austin, TX</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      mobileMenu.classList.toggle('is-open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        mobileMenu.classList.remove('is-open');
+      });
+    });
+
+    // Filter tabs
+    const tabs = document.querySelectorAll('.filter-tab');
+    const items = document.querySelectorAll('.gallery-item');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        const filter = tab.dataset.filter;
+        items.forEach(item => {
+          if (filter === 'all' || item.dataset.type === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

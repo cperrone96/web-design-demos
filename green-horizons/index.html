@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Horizons Landscaping — Austin, TX</title>
+  <meta name="description" content="Austin's premier landscaping and lawn care company. Serving residential and commercial properties with expert design, maintenance, and seasonal care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+        </div>
+        <span class="nav__logo-text">Green Horizons</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="service-area.html">Service Area</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <a href="contact.html" class="btn btn--primary nav__cta">Request a Quote</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="faq.html">FAQ</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img
+        src="assets/images/landscaping/landscaping-hero-curb-appeal-residential.jpg"
+        alt="Professional residential landscaping and curb appeal — Green Horizons Austin TX"
+        loading="eager"
+        fetchpriority="high"
+        style="object-fit:cover;object-position:center;width:100%;height:100%;"
+      />
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <span class="hero__eyebrow animate-fade-in">Landscaping &amp; Lawn Care &middot; Austin, TX</span>
+      <h1 class="hero__title animate-fade-in animate-delay-1">Elevate Your<br>Outdoor Living</h1>
+      <p class="hero__subtitle animate-fade-in animate-delay-2">From meticulous lawn maintenance to stunning landscape designs, we transform ordinary yards into extraordinary outdoor spaces — tailored for Austin's unique climate.</p>
+      <div class="btn-group flex-center animate-fade-in animate-delay-3">
+        <a href="contact.html" class="btn btn--primary btn--lg">Request a Free Quote</a>
+        <a href="gallery.html" class="btn btn--outline btn--lg">View Our Work</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-bar__grid">
+        <div class="stat-item reveal">
+          <div class="stat-item__number">500+</div>
+          <div class="stat-item__label">Projects Completed</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-item__number">12</div>
+          <div class="stat-item__label">Years in Business</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-item__number">98%</div>
+          <div class="stat-item__label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2>Complete Outdoor Solutions</h2>
+        <p class="section-intro mt-2">We offer a full suite of landscaping and lawn care services designed to keep your property looking immaculate year-round — whatever the season brings.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="service-card reveal reveal-delay-1">
+          <img
+            class="service-card__img"
+            src="assets/images/landscaping/lawn-mowing-service-grass.jpg"
+            alt="Lawn mowing and maintenance service for Austin homeowners"
+            loading="lazy"
+            style="object-fit:cover;object-position:center;width:100%;height:100%;"
+          />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Lawn Maintenance</h3>
+            <p class="service-card__text">Regular mowing, edging, and fertilization to keep your lawn lush, green, and healthy all year long.</p>
+            <a href="lawn-care.html" class="btn btn--outline-dark btn--sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <img
+            class="service-card__img"
+            src="assets/images/landscaping/garden-landscape-design-plants.jpg"
+            alt="Custom landscape design with garden beds and plants"
+            loading="lazy"
+            style="object-fit:cover;object-position:center;width:100%;height:100%;"
+          />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Landscape Design</h3>
+            <p class="service-card__text">Custom design plans tailored to your home's architecture, your personal style, and Austin's climate.</p>
+            <a href="services.html" class="btn btn--outline-dark btn--sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <img
+            class="service-card__img"
+            src="assets/images/landscaping/yard-seasonal-cleanup-autumn-leaves.jpg"
+            alt="Fall yard cleanup and seasonal lawn care service"
+            loading="lazy"
+            style="object-fit:cover;object-position:center;width:100%;height:100%;"
+          />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Seasonal Cleanup</h3>
+            <p class="service-card__text">Spring and fall cleanups including leaf removal, bed preparation, and debris clearing to refresh your landscape.</p>
+            <a href="services.html" class="btn btn--outline-dark btn--sm">Learn More</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-4">
+          <img
+            class="service-card__img"
+            src="assets/images/landscaping/lawn-irrigation-sprinkler-system.jpg"
+            alt="Lawn irrigation and sprinkler system installation"
+            loading="lazy"
+            style="object-fit:cover;object-position:center;width:100%;height:100%;"
+          />
+          <div class="service-card__body">
+            <h3 class="service-card__title">Irrigation Systems</h3>
+            <p class="service-card__text">Smart irrigation installation and maintenance that conserves water while keeping every corner of your yard thriving.</p>
+            <a href="services.html" class="btn btn--outline-dark btn--sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-6 reveal">
+        <a href="services.html" class="btn btn--primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow eyebrow--light">Our Portfolio</span>
+        <h2>Landscapes That Inspire</h2>
+        <p class="section-intro mt-2" style="color: rgba(255,255,255,0.65);">Every project is a collaboration. Browse a selection of our recent transformations across Austin and the surrounding areas.</p>
+      </div>
+
+      <div class="work-grid reveal">
+        <div class="work-item">
+          <img src="assets/images/landscaping/garden-flower-beds-residential.jpg" alt="Residential garden bed installation with colorful flowering plants" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="work-item__overlay">
+            <div class="work-item__title">Barton Hills Residence</div>
+            <div class="work-item__location">Full Landscape Design &middot; Austin, TX</div>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <img src="assets/images/landscaping/patio-stone-pavers-outdoor-design.jpg" alt="Custom stone patio and hardscape installation" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="work-item__overlay">
+            <div class="work-item__title">Westlake Estate</div>
+            <div class="work-item__location">Garden Renovation &middot; Westlake Hills, TX</div>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <img src="assets/images/landscaping/outdoor-living-lawn-yard.jpg" alt="Transformed outdoor living space with manicured lawn" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="work-item__overlay">
+            <div class="work-item__title">Cedar Park Family Home</div>
+            <div class="work-item__location">Backyard Transformation &middot; Cedar Park, TX</div>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <img src="assets/images/landscaping/commercial-property-grounds-maintenance.jpg" alt="Commercial property grounds maintenance and landscaping" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+          <div class="work-item__overlay">
+            <div class="work-item__title">Domain Office Complex</div>
+            <div class="work-item__location">Commercial Grounds &middot; North Austin, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-6 reveal">
+        <a href="gallery.html" class="btn btn--outline">Browse Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background: var(--color-bg-2);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Client Stories</span>
+        <h2>What Our Clients Say</h2>
+        <p class="section-intro mt-2">Real feedback from homeowners and businesses across Austin who trust Green Horizons with their outdoor spaces.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-card__stars">
+            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+          </div>
+          <p class="testimonial-card__quote">"Green Horizons completely transformed our backyard from a patchy mess to something that looks like it belongs in a magazine. They were professional, on-time, and genuinely cared about the results."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">S</div>
+            <div>
+              <div class="testimonial-card__name">Sarah M.</div>
+              <div class="testimonial-card__role">Homeowner &middot; Barton Hills, Austin</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-card__stars">
+            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+          </div>
+          <p class="testimonial-card__quote">"We've been using Green Horizons for bi-weekly lawn care for over two years. Our lawn has never looked better. The crew is friendly, consistent, and they always go the extra mile."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">J</div>
+            <div>
+              <div class="testimonial-card__name">James T.</div>
+              <div class="testimonial-card__role">Homeowner &middot; Round Rock, TX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-card__stars">
+            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+          </div>
+          <p class="testimonial-card__quote">"The team at Green Horizons designed our entire front yard from scratch. They listened to our ideas, worked within our budget, and the results exceeded every expectation. Highly recommend!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">A</div>
+            <div>
+              <div class="testimonial-card__name">Angela R.</div>
+              <div class="testimonial-card__role">Homeowner &middot; Cedar Park, TX</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-6 reveal">
+        <a href="testimonials.html" class="btn btn--outline-dark">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT CTA -->
+  <div class="split-cta reveal">
+    <div class="split-cta__img">
+      <img
+        src="assets/images/landscaping/beautiful-green-lawn-yard.jpg"
+        alt="Beautifully maintained lawn and garden by Green Horizons"
+        loading="lazy"
+        style="object-fit:cover;object-position:center;width:100%;height:100%;"
+      />
+    </div>
+    <div class="split-cta__content">
+      <span class="eyebrow eyebrow--light">Get Started Today</span>
+      <h2 class="split-cta__title">Ready to Transform Your Yard?</h2>
+      <ul class="split-cta__list">
+        <li>Free on-site consultation and estimate</li>
+        <li>Licensed, insured, and locally owned</li>
+        <li>Service available as soon as this week</li>
+        <li>Satisfaction guaranteed on every visit</li>
+        <li>Flexible scheduling and service plans</li>
+      </ul>
+      <div class="btn-group">
+        <a href="contact.html" class="btn btn--primary">Request a Free Quote</a>
+        <a href="services.html" class="btn btn--outline">View Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="nav__logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+            </div>
+            <span class="footer__logo-text">Green Horizons</span>
+          </div>
+          <p class="footer__tagline">Austin's trusted landscaping and lawn care team — crafting beautiful, sustainable outdoor spaces since 2013.</p>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Pages</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Our Work</a></li>
+            <li><a href="lawn-care.html">Lawn Maintenance</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Info</div>
+          <ul class="footer__links">
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Free Estimate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (512) 555-0142
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@greenhorizons.com
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Austin, TX &mdash; Serving 25-mile radius
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Mon &ndash; Sat: 7:00 AM &ndash; 6:00 PM
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          &copy; 2026 Green Horizons &middot; Demo site by <a href="#">Data Design Dynamics</a>
+        </div>
+        <div class="footer__copyright">
+          Licensed &amp; Insured &middot; Austin, TX
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll behavior
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      mobileMenu.classList.toggle('is-open');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        mobileMenu.classList.remove('is-open');
+      });
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

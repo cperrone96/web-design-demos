@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Area — Green Horizons Landscaping Austin, TX</title>
+  <meta name="description" content="Green Horizons serves Austin, Round Rock, Cedar Park, Georgetown, Pflugerville, Leander, Buda, Kyle, Dripping Springs, and all surrounding communities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .coverage-map {
+      background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #e8f5e9 100%);
+      border-radius: var(--radius-xl);
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(74,124,89,0.15);
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .coverage-map__rings {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .coverage-map__ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(74,124,89,0.18);
+      transform: translate(-50%, -50%);
+    }
+    .coverage-map__pin-center {
+      position: relative;
+      z-index: 2;
+      width: 48px;
+      height: 48px;
+      background: var(--color-accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      margin: 0 auto 2rem;
+      box-shadow: 0 4px 16px rgba(74,124,89,0.4);
+    }
+    .coverage-map__pin-center::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .coverage-map__label {
+      position: relative;
+      z-index: 2;
+    }
+    .city-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--scrolled" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+        </div>
+        <span class="nav__logo-text">Green Horizons</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="service-area.html" style="color:var(--color-accent);">Service Area</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="contact.html" class="btn btn--primary nav__cta">Request a Quote</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="faq.html">FAQ</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero--short">
+    <div class="hero__bg">
+      <img src="assets/images/landscaping/austin-texas-service-area-homes.jpg" alt="Austin Texas neighborhoods served by Green Horizons landscaping" loading="eager" fetchpriority="high" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">Coverage Zone</span>
+      <h1 class="hero__title animate-fade-in">Areas We Serve</h1>
+      <p class="hero__subtitle animate-fade-in animate-delay-1">Based in Austin, Texas — serving homeowners and businesses across a 25-mile radius with the same high-quality care and attention to detail on every property.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section--sm">
+    <div class="container">
+      <div class="intro-block reveal">
+        <p>Green Horizons is a locally owned Austin landscaping company with roots in this community. We serve properties across the entire Austin metro area — from Georgetown in the north to Buda and Kyle in the south, and from Dripping Springs in the west to Pflugerville and Manor in the east. If you're not sure whether your address falls within our coverage zone, just reach out and ask.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITY CHIPS -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Communities We Serve</span>
+        <h2>Austin and Surrounding Cities</h2>
+        <p class="section-intro mt-2">We provide full landscaping and lawn care services to all of these communities and neighborhoods.</p>
+      </div>
+
+      <div class="area-chips reveal">
+        <div class="area-chip"><span class="area-chip__dot"></span>Austin</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Round Rock</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Cedar Park</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Pflugerville</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Georgetown</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Leander</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Buda</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Kyle</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Dripping Springs</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Manor</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Hutto</div>
+        <div class="area-chip"><span class="area-chip__dot"></span>Taylor</div>
+      </div>
+
+      <div class="mt-6 reveal">
+        <h3 style="font-family: var(--font-heading); color: var(--color-primary); font-size: 1.35rem; margin-bottom: 1.5rem; text-align: center;">Popular Austin Neighborhoods</h3>
+        <div class="area-chips">
+          <div class="area-chip"><span class="area-chip__dot"></span>Barton Hills</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Westlake Hills</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Hyde Park</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Travis Heights</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Tarrytown</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Rollingwood</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Mueller</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Bee Cave</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Lakeway</div>
+          <div class="area-chip"><span class="area-chip__dot"></span>Steiner Ranch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section" style="background: var(--color-bg-2); padding-top: 0;">
+    <div class="container">
+      <div class="coverage-map reveal">
+        <div class="coverage-map__rings">
+          <div class="coverage-map__ring" style="width:560px;height:560px;top:50%;left:50%;"></div>
+          <div class="coverage-map__ring" style="width:380px;height:380px;top:50%;left:50%;"></div>
+          <div class="coverage-map__ring" style="width:200px;height:200px;top:50%;left:50%;"></div>
+        </div>
+        <!-- City dots positioned around center -->
+        <div class="city-dot" style="top:25%;left:50%;"></div>
+        <div class="city-dot" style="top:32%;left:62%;"></div>
+        <div class="city-dot" style="top:45%;left:70%;"></div>
+        <div class="city-dot" style="top:60%;left:65%;"></div>
+        <div class="city-dot" style="top:70%;left:52%;"></div>
+        <div class="city-dot" style="top:68%;left:40%;"></div>
+        <div class="city-dot" style="top:55%;left:28%;"></div>
+        <div class="city-dot" style="top:40%;left:30%;"></div>
+        <div class="coverage-map__pin-center"></div>
+        <div class="coverage-map__label">
+          <h3 style="font-family: var(--font-heading); color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Austin Metro Area</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; max-width: 360px;">25-mile service radius from downtown Austin, covering the full metro area and surrounding communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOT ON THE LIST CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal" style="max-width: 620px; margin: 0 auto;">
+        <span class="eyebrow">Outside Our Zone?</span>
+        <h2>Not on the List?</h2>
+        <p class="mt-2" style="margin-bottom: 2rem;">Our coverage area occasionally expands. If your city or neighborhood isn't listed above, reach out anyway — we may still be able to serve you, especially for larger commercial projects or design work.</p>
+        <div class="btn-group flex-center">
+          <a href="contact.html" class="btn btn--primary btn--lg">Ask About Your Address</a>
+          <a href="services.html" class="btn btn--outline-dark btn--lg">View Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-items reveal">
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          Locally Owned &amp; Operated
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          Licensed &amp; Insured in Texas
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          Serving Austin Since 2013
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          500+ Projects Completed
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="nav__logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+            </div>
+            <span class="footer__logo-text">Green Horizons</span>
+          </div>
+          <p class="footer__tagline">Austin's trusted landscaping and lawn care team — crafting beautiful, sustainable outdoor spaces since 2013.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Pages</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Our Work</a></li>
+            <li><a href="lawn-care.html">Lawn Maintenance</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Info</div>
+          <ul class="footer__links">
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Free Estimate</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (512) 555-0142
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@greenhorizons.com
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Austin, TX &mdash; Serving 25-mile radius
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2026 Green Horizons &middot; Demo site by <a href="#">Data Design Dynamics</a></div>
+        <div class="footer__copyright">Licensed &amp; Insured &middot; Austin, TX</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 40));
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      mobileMenu.classList.toggle('is-open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      hamburger.classList.remove('is-active');
+      mobileMenu.classList.remove('is-open');
+    }));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

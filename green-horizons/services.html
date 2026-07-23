@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Green Horizons Landscaping Austin, TX</title>
+  <meta name="description" content="Explore our full range of landscaping services including lawn maintenance, landscape design, hardscaping, irrigation, and more for Austin-area properties." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--scrolled" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+        </div>
+        <span class="nav__logo-text">Green Horizons</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="services.html" style="color:var(--color-accent);">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="service-area.html">Service Area</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="contact.html" class="btn btn--primary nav__cta">Request a Quote</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="service-area.html">Service Area</a>
+    <a href="faq.html">FAQ</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Request a Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero--short">
+    <div class="hero__bg">
+      <img src="assets/images/landscaping/lawn-landscaping-professional-service.jpg" alt="Green Horizons professional landscaping services Austin TX" loading="eager" fetchpriority="high" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">What We Offer</span>
+      <h1 class="hero__title animate-fade-in">Our Services</h1>
+      <p class="hero__subtitle animate-fade-in animate-delay-1">Comprehensive lawn care and landscaping solutions for residential and commercial properties throughout Austin and the surrounding Hill Country.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section--sm">
+    <div class="container">
+      <div class="intro-block reveal">
+        <p>At Green Horizons, every service is backed by 12 years of Austin-area experience, a team of certified horticulturalists, and a genuine commitment to your property's long-term health and beauty. Whether you need a one-time cleanup or a full landscape renovation, we have a solution built for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-2" style="gap: 2rem;">
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="service-card__title">Lawn Maintenance</h3>
+            <p class="service-card__text">Our signature lawn care program keeps your turf healthy, dense, and vibrant. We handle everything so you never have to think about it.</p>
+            <ul class="service-card__list">
+              <li>Weekly or bi-weekly mowing and edging</li>
+              <li>Seasonal fertilization treatments</li>
+              <li>Weed prevention and spot treatment</li>
+              <li>Clippings cleanup and disposal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="service-card__title">Landscape Design</h3>
+            <p class="service-card__text">From concept sketches to full installation, our designers create cohesive outdoor environments that reflect your lifestyle and complement your home's architecture.</p>
+            <ul class="service-card__list">
+              <li>Custom design consultation and rendering</li>
+              <li>Native and drought-tolerant plant selection</li>
+              <li>Planting bed layout and installation</li>
+              <li>Seasonal color rotations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="service-card__title">Hardscaping</h3>
+            <p class="service-card__text">Beautiful, functional outdoor structures that extend your living space — patios, walkways, retaining walls, and fire pit areas built to last.</p>
+            <ul class="service-card__list">
+              <li>Flagstone and paver patio installation</li>
+              <li>Retaining wall construction</li>
+              <li>Garden path and walkway design</li>
+              <li>Outdoor kitchen and fire pit prep</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zM2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h3 class="service-card__title">Irrigation Systems</h3>
+            <p class="service-card__text">Smart, efficient irrigation designed for Austin's water restrictions and heat. We install, repair, and optimize systems that protect your investment.</p>
+            <ul class="service-card__list">
+              <li>Drip and spray system installation</li>
+              <li>Smart controller programming</li>
+              <li>Leak detection and repair</li>
+              <li>Seasonal startup and winterization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            <h3 class="service-card__title">Seasonal Cleanup</h3>
+            <p class="service-card__text">Start each season fresh. Our thorough cleanups remove debris, prepare beds, and get your landscape ready for peak growing conditions.</p>
+            <ul class="service-card__list">
+              <li>Leaf and debris removal</li>
+              <li>Planting bed edge cleanup</li>
+              <li>Mulch installation and refreshing</li>
+              <li>Spring and fall pruning and shaping</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.76a1 1 0 001.64 1.15C6.73 19.41 8.96 18 12 18c6 0 9-5 9-9s-3-7-4-1z"/></svg>
+            </div>
+            <h3 class="service-card__title">Tree &amp; Shrub Care</h3>
+            <p class="service-card__text">Professional pruning, shaping, and health treatments keep your trees and shrubs looking their best and living longer in Austin's challenging climate.</p>
+            <ul class="service-card__list">
+              <li>Crown shaping and deadwood removal</li>
+              <li>Deep root fertilization</li>
+              <li>Pest and disease treatment</li>
+              <li>Young tree staking and training</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h3 class="service-card__title">Sod Installation</h3>
+            <p class="service-card__text">Instant results with professional sod installation. We prep the soil properly, lay quality sod, and provide aftercare guidance for rapid establishment.</p>
+            <ul class="service-card__list">
+              <li>Soil testing and preparation</li>
+              <li>Bermuda, St. Augustine and Zoysia varieties</li>
+              <li>Grade leveling and drainage correction</li>
+              <li>30-day establishment care plan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card__body">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <h3 class="service-card__title">Lawn Treatments</h3>
+            <p class="service-card__text">Targeted lawn health programs including fertilization, weed control, aeration, and overseeding to build a thicker, greener, more resilient lawn.</p>
+            <ul class="service-card__list">
+              <li>6-step annual fertilization program</li>
+              <li>Pre- and post-emergent weed control</li>
+              <li>Core aeration and overseeding</li>
+              <li>Soil amendment and pH balancing</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" style="background: var(--color-bg-2);">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Transparent Pricing</span>
+        <h2>Simple, Honest Pricing</h2>
+        <p class="section-intro mt-2">No surprise fees. No confusing add-ons. Choose a plan that fits your property and budget — adjust anytime.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <div class="pricing-card">
+          <div class="pricing-card__name">Basic</div>
+          <div class="pricing-card__price">$149</div>
+          <div class="pricing-card__period">per month &mdash; bi-weekly visits</div>
+          <ul class="pricing-card__features">
+            <li>Bi-weekly mowing and edging</li>
+            <li>Blowing and cleanup after each visit</li>
+            <li>Basic weed spot treatment</li>
+            <li>Monthly check-in report</li>
+            <li>Up to 5,000 sq ft lawn</li>
+          </ul>
+          <a href="contact.html" class="btn btn--outline-dark" style="width:100%;justify-content:center;">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Most Popular</div>
+          <div class="pricing-card__name">Standard</div>
+          <div class="pricing-card__price">$249</div>
+          <div class="pricing-card__period">per month &mdash; weekly visits</div>
+          <ul class="pricing-card__features">
+            <li>Weekly mowing, edging and trimming</li>
+            <li>Fertilization (4x per year)</li>
+            <li>Weed control program</li>
+            <li>Seasonal bed cleanup (2x)</li>
+            <li>Up to 10,000 sq ft lawn</li>
+            <li>Priority scheduling</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__name">Premium</div>
+          <div class="pricing-card__price">$399</div>
+          <div class="pricing-card__period">per month &mdash; weekly visits</div>
+          <ul class="pricing-card__features">
+            <li>Everything in Standard</li>
+            <li>Full 6-step treatment program</li>
+            <li>Tree and shrub care included</li>
+            <li>Seasonal color rotation (2x)</li>
+            <li>Unlimited property size</li>
+            <li>Dedicated account manager</li>
+            <li>Same-week emergency visits</li>
+          </ul>
+          <a href="contact.html" class="btn btn--outline-dark" style="width:100%;justify-content:center;">Get Started</a>
+        </div>
+      </div>
+
+      <p class="text-center mt-4 reveal" style="font-size:0.875rem;">All plans include a free initial assessment. Prices based on standard Austin-area residential properties. <a href="contact.html" style="color:var(--color-accent);font-weight:600;">Contact us</a> for custom commercial quotes.</p>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-section__bg">
+      <img src="assets/images/landscaping/garden-yard-lush-green-services.jpg" alt="Lush green yard and garden transformation" loading="lazy" style="object-fit:cover;object-position:center;width:100%;height:100%;" />
+    </div>
+    <div class="cta-section__overlay"></div>
+    <div class="container">
+      <div class="cta-section__content reveal">
+        <span class="eyebrow eyebrow--light">Let's Get to Work</span>
+        <h2>Not Sure Which Service You Need?</h2>
+        <p>Schedule a free on-site consultation. We'll assess your property, listen to your goals, and recommend the right plan — with no pressure and no obligation.</p>
+        <div class="btn-group flex-center">
+          <a href="contact.html" class="btn btn--primary btn--lg">Book a Free Consultation</a>
+          <a href="faq.html" class="btn btn--outline btn--lg">Read Our FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="nav__logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-5.7c-1.1.6-2.3 1-3.5 1C5.9 11.8 4 10 4 7.8c0-2.3 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2 2.2 0 4 1.8 4 4 0 2.2-1.9 4-4.5 4-1.2 0-2.4-.4-3.5-1v5.7H11z"/></svg>
+            </div>
+            <span class="footer__logo-text">Green Horizons</span>
+          </div>
+          <p class="footer__tagline">Austin's trusted landscaping and lawn care team — crafting beautiful, sustainable outdoor spaces since 2013.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Pages</div>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Our Work</a></li>
+            <li><a href="lawn-care.html">Lawn Maintenance</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Info</div>
+          <ul class="footer__links">
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Free Estimate</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (512) 555-0142
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@greenhorizons.com
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Austin, TX &mdash; Serving 25-mile radius
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2026 Green Horizons &middot; Demo site by <a href="#">Data Design Dynamics</a></div>
+        <div class="footer__copyright">Licensed &amp; Insured &middot; Austin, TX</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('is-active');
+      mobileMenu.classList.toggle('is-open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('is-active');
+        mobileMenu.classList.remove('is-open');
+      });
+    });
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

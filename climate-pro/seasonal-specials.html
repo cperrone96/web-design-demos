@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC Seasonal Specials & Offers — Climate Control Pro Austin TX</title>
+  <meta name="description" content="Current HVAC deals and seasonal specials from Climate Control Pro in Austin, TX. AC tune-up discounts, installation savings, maintenance plan offers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .expiry-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .expiry-badge--urgent { background: rgba(224,100,32,.12); color: var(--color-accent); border: 1px solid rgba(224,100,32,.3); }
+    .expiry-badge--ongoing { background: rgba(16,185,129,.1); color: #059669; border: 1px solid rgba(16,185,129,.3); }
+    .expiry-badge--blue { background: rgba(74,144,217,.12); color: var(--color-accent-blue); border: 1px solid rgba(74,144,217,.3); }
+    .offer-price-old { font-size:0.9rem;color:var(--color-text-muted);text-decoration:line-through;margin-right:8px; }
+    .offer-price-new { font-family:var(--font-heading);font-size:2.8rem;font-weight:700;color:var(--color-accent);line-height:1; }
+    .offer-save { display:inline-block;background:rgba(224,100,32,.1);color:var(--color-accent);font-weight:700;font-size:0.8rem;padding:3px 10px;border-radius:100px;margin-left:8px;vertical-align:middle; }
+  </style>
+</head>
+<body>
+
+<div class="demo-banner">Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a></div>
+
+<nav class="nav" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2"/><path d="M16 4v24M4 16h24M8 8l16 16M24 8L8 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+      <div class="nav__logo-sub"><span class="nav__logo-name">Climate Control Pro</span><span class="nav__logo-tag">Austin HVAC Experts</span></div>
+    </a>
+    <div class="nav__links">
+      <a href="services.html" class="nav__link">Services</a><a href="about.html" class="nav__link">About</a>
+      <a href="maintenance.html" class="nav__link">Maintenance</a>
+      <a href="financing.html" class="nav__link">Financing</a>
+      <a href="blog.html" class="nav__link">Blog</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <a href="tel:5125554822" class="nav__emergency">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+      (512) 555-HVAC
+    </a>
+    <a href="booking.html" class="btn btn--primary nav__cta">Schedule Service</a>
+    <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobileMenu">
+  <a href="services.html" class="nav__link">Services</a>
+  <a href="maintenance.html" class="nav__link">Maintenance Plans</a>
+  <a href="financing.html" class="nav__link">Financing</a>
+  <a href="blog.html" class="nav__link">Blog</a>
+  <a href="contact.html" class="nav__link">Contact</a>
+  <a href="emergency.html" class="nav__link">Emergency Service</a>
+  <a href="tel:5125554822" class="nav__emergency"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>Call (512) 555-HVAC</a>
+  <a href="booking.html" class="btn btn--primary">Schedule Service</a>
+</div>
+
+<!-- Hero -->
+<div class="page-hero page-offset" style="background:var(--color-primary);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('assets/images/hvac/hvac-seasonal-summer-cooling-specials.jpg');background-size:cover;background-position:center;opacity:0.10;" role="img" aria-label="Seasonal HVAC specials and promotions — Climate Control Pro Austin TX"></div>
+  <div class="container page-hero__content" style="position:relative;z-index:2;">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Seasonal Specials</span></div>
+    <span class="eyebrow eyebrow--light">Limited-Time Offers</span>
+    <h1>Current Offers &amp; Seasonal Specials</h1>
+    <p>We run seasonal promotions to help Austin homeowners get ahead of the heat and cold. Mention the offer when you book — no coupon code required.</p>
+  </div>
+</div>
+
+<!-- Offer Cards -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="gap:32px;">
+
+      <!-- Offer 1 -->
+      <div class="offer-card reveal reveal-delay-1">
+        <div class="offer-card__ribbon"></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+          <span class="badge badge--accent">AC Service</span>
+          <span class="expiry-badge expiry-badge--urgent">Expires Aug 31, 2026</span>
+        </div>
+        <h3 style="margin-bottom:4px;">Summer AC Tune-Up Special</h3>
+        <p style="color:var(--color-text-muted);font-size:0.9rem;margin-bottom:16px;">Get your AC in peak shape before Austin's summer really hits. Our comprehensive seasonal tune-up includes filter inspection, coil cleaning, refrigerant check, electrical testing, and a full performance report.</p>
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;margin-bottom:20px;">
+          <span class="offer-price-old">$89</span>
+          <span class="offer-price-new">$59</span>
+          <span class="offer-save">Save $30</span>
+        </div>
+        <a href="booking.html" class="btn btn--primary">Book This Offer</a>
+      </div>
+
+      <!-- Offer 2 -->
+      <div class="offer-card offer-card--blue reveal reveal-delay-2">
+        <div class="offer-card__ribbon"></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+          <span class="badge badge--blue">New Installation</span>
+          <span class="expiry-badge expiry-badge--blue">Expires Jun 30, 2026</span>
+        </div>
+        <h3 style="margin-bottom:4px;">$500 Off Any New System Installation</h3>
+        <p style="color:var(--color-text-muted);font-size:0.9rem;margin-bottom:16px;">Replace your aging HVAC system before the peak season and save $500 on any system over $3,000. Applies to complete system replacements including central AC, heat pumps, and gas furnaces. Financing available.</p>
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;margin-bottom:20px;">
+          <span class="offer-price-new" style="color:var(--color-accent-blue);">$500 Off</span>
+          <span style="color:var(--color-text-muted);font-size:0.9rem;margin-left:8px;">on systems over $3,000</span>
+        </div>
+        <a href="booking.html" class="btn btn--blue">Get a Free Quote</a>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="offer-card offer-card--green reveal reveal-delay-1">
+        <div class="offer-card__ribbon"></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+          <span class="badge badge--green">Maintenance Plan</span>
+          <span class="expiry-badge expiry-badge--ongoing">Ongoing Offer</span>
+        </div>
+        <h3 style="margin-bottom:4px;">First Month Free — Annual Maintenance Plan</h3>
+        <p style="color:var(--color-text-muted);font-size:0.9rem;margin-bottom:16px;">Sign up for any annual maintenance plan and get your first month free. Plans start at $99/year and include annual tune-ups, priority scheduling, repair discounts, and full system inspections. No contract required.</p>
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;margin-bottom:20px;">
+          <span class="offer-price-new" style="color:#059669;">1 Month Free</span>
+          <span style="color:var(--color-text-muted);font-size:0.9rem;margin-left:8px;">on annual plan signup</span>
+        </div>
+        <a href="maintenance.html" class="btn btn--outline-dark">View Plan Options</a>
+      </div>
+
+      <!-- Offer 4 -->
+      <div class="offer-card offer-card--navy reveal reveal-delay-2">
+        <div class="offer-card__ribbon"></div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+          <span class="badge badge--navy">Air Quality</span>
+          <span class="expiry-badge expiry-badge--urgent">Expires Jul 31, 2026</span>
+        </div>
+        <h3 style="margin-bottom:4px;">Free Indoor Air Quality Test with Any Service Call</h3>
+        <p style="color:var(--color-text-muted);font-size:0.9rem;margin-bottom:16px;">Austin's cedar and oak seasons wreak havoc on indoor air. Our $99 air quality assessment — which tests for particulate levels, humidity, and common allergens — is included free with any booked service call through July 31.</p>
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:4px;margin-bottom:20px;">
+          <span class="offer-price-old">$99 value</span>
+          <span class="offer-price-new" style="color:var(--color-primary);">Free</span>
+          <span style="color:var(--color-text-muted);font-size:0.9rem;margin-left:8px;">with any service call</span>
+        </div>
+        <a href="booking.html" class="btn btn--primary">Book a Service Call</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How to Redeem -->
+<section class="section section--off">
+  <div class="container container--narrow">
+    <div class="section-header reveal">
+      <span class="eyebrow">No Hassle</span>
+      <h2>How to Redeem an Offer</h2>
+      <div class="divider divider--center"></div>
+    </div>
+    <div class="grid-3 reveal">
+      <div style="text-align:center;padding:24px;">
+        <div style="width:56px;height:56px;background:rgba(224,100,32,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--color-accent);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        </div>
+        <h4>Call or Book Online</h4>
+        <p style="font-size:0.875rem;color:var(--color-text-muted);">Schedule your service by phone at (512) 555-4822 or use our online booking form.</p>
+      </div>
+      <div style="text-align:center;padding:24px;">
+        <div style="width:56px;height:56px;background:rgba(224,100,32,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--color-accent);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h4>Mention the Offer</h4>
+        <p style="font-size:0.875rem;color:var(--color-text-muted);">Just tell us which offer you'd like to apply when you book. No coupon code or printout required.</p>
+      </div>
+      <div style="text-align:center;padding:24px;">
+        <div style="width:56px;height:56px;background:rgba(224,100,32,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--color-accent);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <h4>Savings Applied</h4>
+        <p style="font-size:0.875rem;color:var(--color-text-muted);">Your discount is applied to your invoice automatically. One offer per visit. No stacking with other promotions.</p>
+      </div>
+    </div>
+
+    <div class="info-box reveal" style="margin-top:8px;">
+      <strong>Offer Terms:</strong> One offer per household per visit. Offers may not be combined with other discounts or promotions. Installation discount applies to complete system replacements only; does not apply to parts-only repairs or component-only upgrades. Air quality test offer requires a paid service call. Climate Control Pro reserves the right to modify or discontinue offers at any time. Offers valid for Austin metro area service calls only.
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<div style="background:linear-gradient(135deg,var(--color-primary) 0%,#1a3066 100%);padding:80px 0;text-align:center;">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Ready to Save?</span>
+    <h2 style="color:#fff;margin-bottom:12px;">Book a Service &amp; Apply Your Offer</h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 32px;">Spots fill fast before summer. Lock in your appointment and savings today.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="booking.html" class="btn btn--primary btn--lg">Book Now</a>
+      <a href="tel:5125554822" class="btn btn--outline btn--lg">Call (512) 555-4822</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3>Climate Control Pro</h3>
+        <p>Austin's most trusted HVAC company since 2009. We keep families comfortable year-round with expert heating, cooling, and air quality services.</p>
+        <div class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg><a href="tel:5125554822">(512) 555-4822</a></div>
+        <div class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:service@climatepro.com">service@climatepro.com</a></div>
+        <div class="footer__license">License: TACL B123456C</div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <div class="footer__links">
+          <a href="ac-repair.html">AC Repair</a>
+          <a href="installation.html">AC Installation</a>
+          <a href="heating.html">Heating Repair</a>
+          <a href="maintenance.html">Maintenance Plans</a>
+          <a href="services.html">Indoor Air Quality</a>
+          <a href="emergency.html">Emergency Service</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="services.html">All Services</a>
+          <a href="financing.html">Financing</a>
+          <a href="testimonials.html">Reviews</a>
+          <a href="seasonal-specials.html">Special Offers</a>
+          <a href="blog.html">Blog &amp; Tips</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Resources</div>
+        <div class="footer__links">
+          <a href="booking.html">Book a Service</a>
+          <a href="faq.html">FAQ</a>
+          <a href="service-area.html">Service Area</a>
+          <a href="seasonal-specials.html">Current Specials</a>
+          <a href="emergency.html">24/7 Emergency</a>
+          <a href="financing.html">Apply for Financing</a>
+        </div>
+        <div style="margin-top:24px;">
+          <div class="footer__col-title">Hours</div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.9;">Mon–Fri: 7am – 7pm<br>Saturday: 8am – 5pm<br><span style="color:var(--color-accent);font-weight:600;">Emergency: 24/7</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Climate Control Pro. All rights reserved.</span>
+      <span>Demo site built by <a href="#">Data Design Dynamics</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  const h=document.getElementById('hamburger'),m=document.getElementById('mobileMenu');
+  h.addEventListener('click',()=>{h.classList.toggle('is-active');m.classList.toggle('is-open');});
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible');}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
