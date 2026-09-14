@@ -72,7 +72,8 @@
         <div>
           <h2 style="font-size: 1.75rem; color: var(--color-primary); margin-bottom: 2rem;">Request a Free Estimate</h2>
           <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">Demo form: submitting shows a local confirmation only; no information is sent or stored.</p>
-          <form data-demo-form="true" data-demo-status="contactFormStatus" aria-describedby="contactFormStatus">
+          <noscript><p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">JavaScript is disabled, so this demo form is inactive. No information is sent.</p></noscript>
+          <form action="data:text/plain,Demo-only-form" method="post" target="demoNoJsTarget" data-demo-form="true" data-nojs-fallback="safe-local" data-demo-status="contactFormStatus" aria-describedby="contactFormStatus">
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name</label>
@@ -243,6 +244,8 @@
   </div>
 
   <!-- FOOTER -->
+  <iframe name="demoNoJsTarget" title="Inactive demo form target" hidden></iframe>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">

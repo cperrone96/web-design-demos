@@ -23,6 +23,9 @@ The checked-in sites stop at the static HTML/CSS layer. No production GA4 proper
 tracking ID, form destination, CRM connection, or customer dataset is included.
 The contact, booking, and newsletter forms use native browser validation followed
 by a local-only confirmation; their submit handlers prevent network transmission.
+For a JavaScript-free browser, each form uses a POST to a hidden local `data:`
+fallback target and displays a `<noscript>` notice. This avoids sending fields to
+the current page or an external service.
 This keeps the repository safe to share and makes the deployment boundary explicit.
 
 ## Privacy-safe event contract

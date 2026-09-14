@@ -199,7 +199,8 @@
         <span class="eyebrow eyebrow--light">Stay Informed</span>
         <h2>Get HVAC Tips in Your Inbox</h2>
         <p>Seasonal maintenance reminders, energy-saving tips, and Austin-specific HVAC advice — delivered monthly. No spam, unsubscribe anytime.</p>
-        <form class="newsletter-form" data-demo-form="true" data-demo-status="newsletterFormStatus" aria-describedby="newsletterFormStatus">
+        <noscript><p style="font-size:0.85rem;color:#fff;margin-top:10px;">JavaScript is disabled, so this demo subscription form is inactive. No information is sent.</p></noscript>
+        <form class="newsletter-form" action="data:text/plain,Demo-only-form" method="post" target="demoNoJsTarget" data-demo-form="true" data-nojs-fallback="safe-local" data-demo-status="newsletterFormStatus" aria-describedby="newsletterFormStatus">
           <label for="newsletterEmail" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">Email address for HVAC tips</label>
           <input type="email" id="newsletterEmail" name="email" class="form-input" placeholder="your@email.com" style="background:#fff;" required>
           <button type="submit" class="btn btn--primary">Subscribe</button>
@@ -242,6 +243,8 @@
     </div>
   </div>
 </section>
+
+<iframe name="demoNoJsTarget" title="Inactive demo form target" hidden></iframe>
 
 <footer class="footer">
   <div class="container">

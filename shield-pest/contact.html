@@ -74,7 +74,8 @@
           <h2>Request a Free Inspection</h2>
           <p>Preview the form flow below. This demo does not send or store submissions; a production site would connect it to an owner-approved contact workflow.</p>
 
-          <form id="contactForm" data-demo-form="true" data-demo-status="formSuccess" aria-describedby="formSuccess">
+          <noscript><p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">JavaScript is disabled, so this demo form is inactive. No information is sent.</p></noscript>
+          <form id="contactForm" action="data:text/plain,Demo-only-form" method="post" target="demoNoJsTarget" data-demo-form="true" data-nojs-fallback="safe-local" data-demo-status="formSuccess" aria-describedby="formSuccess">
 
             <div class="form-row">
               <div class="form-group">
@@ -290,6 +291,8 @@
       </div>
     </div>
   </section>
+
+  <iframe name="demoNoJsTarget" title="Inactive demo form target" hidden></iframe>
 
   <!-- Footer -->
   <footer class="site-footer">

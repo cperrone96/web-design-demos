@@ -69,7 +69,8 @@
         <p style="color:var(--color-text-muted);margin-bottom:32px;font-size:0.9rem;">All fields marked with <span style="color:var(--color-accent);">*</span> are required. We typically respond within 2 hours during business hours.</p>
 
         <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">Demo form: submitting shows a local confirmation only; no appointment is created and no information is sent or stored.</p>
-        <form data-demo-form="true" data-demo-status="bookingFormStatus" aria-describedby="bookingFormStatus">
+        <noscript><p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">JavaScript is disabled, so this demo form is inactive. No information is sent.</p></noscript>
+        <form action="data:text/plain,Demo-only-form" method="post" target="demoNoJsTarget" data-demo-form="true" data-nojs-fallback="safe-local" data-demo-status="bookingFormStatus" aria-describedby="bookingFormStatus">
           <!-- Name row -->
           <div class="form-grid" style="margin-bottom:20px;">
             <div class="form-group">
@@ -247,6 +248,8 @@
     </div>
   </div>
 </section>
+
+<iframe name="demoNoJsTarget" title="Inactive demo form target" hidden></iframe>
 
 <footer class="footer">
   <div class="container">
