@@ -17,7 +17,9 @@ handoff without exposing client systems or customer data.
   [`docs/measurement-and-delivery.md`](docs/measurement-and-delivery.md).
 - Contact, booking, and newsletter forms are intentionally demo-only: native
   browser validation runs, then JavaScript prevents network submission and shows a
-  local confirmation. No form backend is implied.
+  local confirmation. If JavaScript is disabled, a hidden local `data:` fallback
+  target absorbs the POST and the page explains that no information is sent. No
+  form backend is implied.
 - The repo is intentionally excluded from the data-science project pins. It supports
   applications that value web analytics, reporting, conversion measurement, and
   cross-functional delivery.

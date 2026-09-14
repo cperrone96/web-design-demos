@@ -11,6 +11,7 @@ from urllib.parse import unquote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SAFE_DEMO_ACTION = "data:text/plain,Demo-only-form"
 SITES = {
     "green-horizons": 8,
     "climate-pro": 16,
@@ -45,6 +46,8 @@ class PageParser(HTMLParser):
         self.forms: list[dict[str, str]] = []
         self.controls: list[tuple[str, str, int]] = []
         self.current_form = -1
+        self.noscript_count = 0
+        self.in_noscript = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {key.lower(): value or "" for key, value in attrs}
@@ -60,11 +63,17 @@ class PageParser(HTMLParser):
             self.forms.append(
                 {
                     "action": values.get("action", ""),
+                    "method": values.get("method", "").lower(),
+                    "target": values.get("target", ""),
                     "demo": values.get("data-demo-form", "").lower(),
+                    "nojs": values.get("data-nojs-fallback", "").lower(),
                     "status": values.get("data-demo-status", ""),
                 }
             )
             self.current_form = len(self.forms) - 1
+        elif tag == "noscript":
+            self.noscript_count += 1
+            self.in_noscript = True
         elif tag == "label":
             if values.get("for"):
                 self.label_for.add(values["for"])
@@ -98,6 +107,8 @@ class PageParser(HTMLParser):
             self.in_title = False
         elif tag.lower() == "form":
             self.current_form = -1
+        elif tag.lower() == "noscript":
+            self.in_noscript = False
 
     def handle_data(self, data: str) -> None:
         if self.in_title:
@@ -164,12 +175,20 @@ def check_file(path: Path) -> list[str]:
         if not alt.strip():
             errors.append(f"{rel} has an image without alt text: {src}")
     for form in parser.forms:
-        if form["action"]:
-            errors.append(f"{rel} demo form must omit action so it cannot transmit data")
+        if form["action"] != SAFE_DEMO_ACTION:
+            errors.append(f"{rel} demo form must use the non-network fallback action {SAFE_DEMO_ACTION!r}")
+        if form["method"] != "post":
+            errors.append(f"{rel} demo form must use method=\"post\" for its no-JavaScript fallback")
+        if form["target"] != "demoNoJsTarget":
+            errors.append(f"{rel} demo form must target the hidden local no-JavaScript frame")
         if form["demo"] != "true":
             errors.append(f"{rel} form is missing data-demo-form=\"true\"")
+        if form["nojs"] != "safe-local":
+            errors.append(f"{rel} form is missing data-nojs-fallback=\"safe-local\"")
         if not form["status"] or form["status"] not in parser.status_ids:
             errors.append(f"{rel} demo form is missing a status target with role=status/aria-live")
+    if parser.forms and parser.noscript_count < len(parser.forms):
+        errors.append(f"{rel} needs one explicit <noscript> no-data fallback per demo form")
     for control_id, control_type, form_index in parser.controls:
         if form_index < 0:
             continue
