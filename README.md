@@ -15,6 +15,9 @@ handoff without exposing client systems or customer data.
 - The source contains no production analytics collection. The measurement contract
   and privacy-safe handoff are documented in
   [`docs/measurement-and-delivery.md`](docs/measurement-and-delivery.md).
+- Contact, booking, and newsletter forms are intentionally demo-only: native
+  browser validation runs, then JavaScript prevents network submission and shows a
+  local confirmation. No form backend is implied.
 - The repo is intentionally excluded from the data-science project pins. It supports
   applications that value web analytics, reporting, conversion measurement, and
   cross-functional delivery.

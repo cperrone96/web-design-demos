@@ -14,7 +14,7 @@
 
   <!-- Demo Banner -->
   <div class="demo-banner">
-    Demo site by <a href="#">Data Design Dynamics</a> &nbsp;—&nbsp; <strong>This could be your business.</strong> &nbsp;<a href="#">Get a free quote →</a>
+    Demo site by <a href="https://datadesigndynamics.org/">Data Design Dynamics</a> &nbsp;—&nbsp; <strong>This could be your business.</strong> &nbsp;<a href="contact.html">Get a free quote →</a>
   </div>
 
   <!-- Navigation -->
@@ -72,9 +72,9 @@
         <!-- Form -->
         <div class="contact-form-card reveal">
           <h2>Request a Free Inspection</h2>
-          <p>Fill out the form below and one of our team members will call you back within 60 minutes during business hours to confirm your appointment and answer any questions.</p>
+          <p>Preview the form flow below. This demo does not send or store submissions; a production site would connect it to an owner-approved contact workflow.</p>
 
-          <form id="contactForm" novalidate>
+          <form id="contactForm" data-demo-form="true" data-demo-status="formSuccess" aria-describedby="formSuccess">
 
             <div class="form-row">
               <div class="form-group">
@@ -136,7 +136,7 @@
             </div>
 
             <div class="form-group" style="margin-bottom:24px;">
-              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;">
+              <label for="consent" style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;">
                 <input type="checkbox" id="consent" name="consent" style="width:auto;margin-top:3px;flex-shrink:0;" />
                 <span style="font-size:0.85rem;color:var(--color-text-muted);">I agree to be contacted by Shield Pest Solutions via phone or email regarding my inquiry. We respect your privacy and will never share your information.</span>
               </label>
@@ -150,8 +150,8 @@
             </button>
 
             <!-- Success message (hidden by default) -->
-            <div id="formSuccess" style="display:none;margin-top:20px;background:rgba(0,200,70,0.1);border:1.5px solid var(--color-accent);border-radius:var(--radius-sm);padding:16px 20px;">
-              <p style="color:var(--color-accent-dark);font-weight:600;margin:0;">Request sent! We'll call you back within 60 minutes during business hours.</p>
+            <div id="formSuccess" role="status" aria-live="polite" tabindex="-1" hidden style="margin-top:20px;background:rgba(0,200,70,0.1);border:1.5px solid var(--color-accent);border-radius:var(--radius-sm);padding:16px 20px;">
+              <p style="color:var(--color-accent-dark);font-weight:600;margin:0;">Demo only: no information was sent or stored. A production deployment would connect this form to an owner-approved contact workflow.</p>
             </div>
 
           </form>
@@ -338,7 +338,7 @@
       <div class="footer-service-note">Proudly serving Austin, Round Rock, Cedar Park, Georgetown, Pflugerville, Buda, Kyle, and surrounding communities.</div>
       <div class="footer-bottom">
         <p>&copy; 2024 Shield Pest Solutions. All rights reserved.</p>
-        <div style="display:flex;gap:20px;"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        <div style="display:flex;gap:20px;"><span>Privacy Policy (demo)</span><span>Terms of Service (demo)</span></div>
       </div>
     </div>
   </footer>
@@ -369,33 +369,8 @@
     }, { threshold: 0.1 });
     revealEls.forEach(el => observer.observe(el));
 
-    // Form submit (demo — shows success message)
-    const form = document.getElementById('contactForm');
-    const successMsg = document.getElementById('formSuccess');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const required = form.querySelectorAll('[required]');
-      let valid = true;
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          field.style.borderColor = '#e53e3e';
-          valid = false;
-        } else {
-          field.style.borderColor = '';
-        }
-      });
-      if (valid) {
-        form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
-        successMsg.style.display = 'block';
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    });
-
-    // Clear error styling on input
-    form.querySelectorAll('input, select, textarea').forEach(field => {
-      field.addEventListener('input', () => { field.style.borderColor = ''; });
-    });
   </script>
+  <script src="../scripts/demo-forms.js" defer></script>
 
 </body>
 </html>
