@@ -14,7 +14,7 @@
 
   <!-- DEMO BANNER -->
   <div class="demo-banner">
-    Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a>
+    Demo site by <a href="https://datadesigndynamics.org/">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="contact.html">Get a free quote &rarr;</a>
   </div>
 
   <!-- NAVIGATION -->
@@ -71,7 +71,8 @@
         <!-- FORM -->
         <div>
           <h2 style="font-size: 1.75rem; color: var(--color-primary); margin-bottom: 2rem;">Request a Free Estimate</h2>
-          <form action="#" method="POST">
+          <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">Demo form: submitting shows a local confirmation only; no information is sent or stored.</p>
+          <form data-demo-form="true" data-demo-status="contactFormStatus" aria-describedby="contactFormStatus">
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name</label>
@@ -130,6 +131,7 @@
             <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">
               Send My Request
             </button>
+            <p id="contactFormStatus" role="status" aria-live="polite" tabindex="-1" hidden style="font-size:0.85rem;color:var(--color-primary);margin-top:1rem;text-align:center;"></p>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; text-align: center;">We'll respond within 1 business day. No spam, ever.</p>
           </form>
         </div>
@@ -289,12 +291,13 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="footer__copyright">&copy; 2026 Green Horizons &middot; Demo site by <a href="#">Data Design Dynamics</a></div>
+        <div class="footer__copyright">&copy; 2026 Green Horizons &middot; Demo site by <a href="https://datadesigndynamics.org/">Data Design Dynamics</a></div>
         <div class="footer__copyright">Licensed &amp; Insured &middot; Austin, TX</div>
       </div>
     </div>
   </footer>
 
+  <script src="../scripts/demo-forms.js" defer></script>
   <script>
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {

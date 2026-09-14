@@ -38,12 +38,36 @@ class PageParser(HTMLParser):
         self.description = False
         self.images: list[tuple[str, str]] = []
         self.references: list[tuple[str, str]] = []
+        self.fragments: list[str] = []
+        self.ids: set[str] = set()
+        self.label_for: set[str] = set()
+        self.status_ids: set[str] = set()
+        self.forms: list[dict[str, str]] = []
+        self.controls: list[tuple[str, str, int]] = []
+        self.current_form = -1
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {key.lower(): value or "" for key, value in attrs}
         tag = tag.lower()
+        if values.get("id"):
+            self.ids.add(values["id"])
+        if values.get("role") == "status" or values.get("aria-live"):
+            if values.get("id"):
+                self.status_ids.add(values["id"])
         if tag == "html":
             self.html_lang = values.get("lang", "").strip()
+        elif tag == "form":
+            self.forms.append(
+                {
+                    "action": values.get("action", ""),
+                    "demo": values.get("data-demo-form", "").lower(),
+                    "status": values.get("data-demo-status", ""),
+                }
+            )
+            self.current_form = len(self.forms) - 1
+        elif tag == "label":
+            if values.get("for"):
+                self.label_for.add(values["for"])
         elif tag == "title":
             self.in_title = True
         elif tag == "meta":
@@ -62,10 +86,18 @@ class PageParser(HTMLParser):
                     self.references.append((tag, values[attr]))
         elif tag == "a" and values.get("href"):
             self.references.append(("a", values["href"]))
+            if values["href"].startswith("#") and values["href"] != "#":
+                self.fragments.append(values["href"][1:].split("?")[0])
+        elif tag in {"input", "select", "textarea"}:
+            input_type = values.get("type", "").lower()
+            if input_type not in {"hidden", "submit", "button", "reset", "image"}:
+                self.controls.append((values.get("id", ""), input_type or tag, self.current_form))
 
     def handle_endtag(self, tag: str) -> None:
         if tag.lower() == "title":
             self.in_title = False
+        elif tag.lower() == "form":
+            self.current_form = -1
 
     def handle_data(self, data: str) -> None:
         if self.in_title:
@@ -125,9 +157,26 @@ def check_file(path: Path) -> list[str]:
         errors.append(f"{rel} is missing a viewport meta tag")
     if not parser.description:
         errors.append(f"{rel} is missing a non-empty meta description")
+    for fragment in parser.fragments:
+        if fragment not in parser.ids:
+            errors.append(f"{rel} has a broken in-page anchor: #{fragment}")
     for src, alt in parser.images:
         if not alt.strip():
             errors.append(f"{rel} has an image without alt text: {src}")
+    for form in parser.forms:
+        if form["action"]:
+            errors.append(f"{rel} demo form must omit action so it cannot transmit data")
+        if form["demo"] != "true":
+            errors.append(f"{rel} form is missing data-demo-form=\"true\"")
+        if not form["status"] or form["status"] not in parser.status_ids:
+            errors.append(f"{rel} demo form is missing a status target with role=status/aria-live")
+    for control_id, control_type, form_index in parser.controls:
+        if form_index < 0:
+            continue
+        if not control_id:
+            errors.append(f"{rel} {control_type} control is missing an id for label association")
+        elif control_id not in parser.label_for:
+            errors.append(f"{rel} control #{control_id} is missing an associated <label for=...>")
     for kind, reference in parser.references:
         target = local_target(path, reference)
         if target is not None and not target.is_file():

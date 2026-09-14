@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div class="demo-banner">Demo site by <a href="#">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="#">Get a free quote &rarr;</a></div>
+<div class="demo-banner">Demo site by <a href="https://datadesigndynamics.org/">Data Design Dynamics</a> &mdash; <strong>This could be your business.</strong> <a href="contact.html">Get a free quote &rarr;</a></div>
 
 <nav class="nav" id="mainNav">
   <div class="nav__inner">
@@ -68,7 +68,8 @@
         <h2 style="margin-bottom:8px;font-size:1.6rem;">Book Your Appointment</h2>
         <p style="color:var(--color-text-muted);margin-bottom:32px;font-size:0.9rem;">All fields marked with <span style="color:var(--color-accent);">*</span> are required. We typically respond within 2 hours during business hours.</p>
 
-        <form action="#" method="post" novalidate>
+        <p style="font-size:0.85rem;color:var(--color-text-muted);margin-bottom:1rem;">Demo form: submitting shows a local confirmation only; no appointment is created and no information is sent or stored.</p>
+        <form data-demo-form="true" data-demo-status="bookingFormStatus" aria-describedby="bookingFormStatus">
           <!-- Name row -->
           <div class="form-grid" style="margin-bottom:20px;">
             <div class="form-group">
@@ -168,11 +169,12 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92v2z"/></svg>
             Book My Appointment
           </button>
+          <p id="bookingFormStatus" role="status" aria-live="polite" tabindex="-1" hidden style="font-size:0.85rem;color:var(--color-accent-blue);margin-top:1rem;text-align:center;"></p>
         </form>
 
         <div class="confirm-note">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:6px;color:var(--color-accent-blue);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-          We'll confirm your appointment within 2 hours by phone or email. For same-day emergencies, call us directly at <a href="tel:5125554822" style="color:var(--color-accent-blue);font-weight:600;">(512) 555-4822</a>.
+          Demo only: this form does not create an appointment or send information. A production handoff would connect it to an owner-approved scheduling workflow. For same-day emergencies, call <a href="tel:5125554822" style="color:var(--color-accent-blue);font-weight:600;">(512) 555-4822</a>.
         </div>
       </div>
 
@@ -297,11 +299,12 @@
     </div>
     <div class="footer__bottom">
       <span>&copy; 2026 Climate Control Pro. All rights reserved.</span>
-      <span>Demo site built by <a href="#">Data Design Dynamics</a></span>
+      <span>Demo site built by <a href="https://datadesigndynamics.org/">Data Design Dynamics</a></span>
     </div>
   </div>
 </footer>
 
+<script src="../scripts/demo-forms.js" defer></script>
 <script>
   const nav=document.getElementById('mainNav');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));

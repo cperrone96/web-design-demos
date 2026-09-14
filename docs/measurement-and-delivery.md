@@ -21,6 +21,8 @@ GA4 events -> reporting/dashboard layer
 
 The checked-in sites stop at the static HTML/CSS layer. No production GA4 property,
 tracking ID, form destination, CRM connection, or customer dataset is included.
+The contact, booking, and newsletter forms use native browser validation followed
+by a local-only confirmation; their submit handlers prevent network transmission.
 This keeps the repository safe to share and makes the deployment boundary explicit.
 
 ## Privacy-safe event contract
