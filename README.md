@@ -1,96 +1,48 @@
 # Web Design Demos
 
-Static, hand-built marketing-site demonstrations for three fictional local-service
-businesses. This repository is business/web-delivery evidence—not a data-science
-portfolio project. It shows how I translate a business brief into information
-architecture, responsive interface code, conversion paths, and a measurement-ready
-handoff without exposing client systems or customer data.
+Three responsive marketing sites for fictional local-service businesses, each designed around how a customer finds, compares and contacts a provider. Together they show information architecture, conversion paths and a measurement plan ready for analytics.
 
-## Portfolio boundary
+| Green Horizons (landscaping) | Climate Control Pro (HVAC) | Shield Pest Solutions (pest control) |
+|---|---|---|
+| ![Green Horizons home page](docs/screenshots/green-horizons.jpg) | ![Climate Control Pro home page](docs/screenshots/climate-pro.jpg) | ![Shield Pest Solutions home page](docs/screenshots/shield-pest.jpg) |
+| 8 pages · [source](green-horizons/index.html) | 16 pages · [source](climate-pro/index.html) | 4 pages · [source](shield-pest/index.html) |
 
-- **All three businesses, metrics, testimonials, phone numbers, and email addresses
-  are fictional demonstration content.** They are not client results or references.
-- No customer records, production analytics exports, credentials, tracking IDs, or
-  proprietary implementation details are stored here.
-- The source contains no production analytics collection. The measurement contract
-  and privacy-safe handoff are documented in
-  [`docs/measurement-and-delivery.md`](docs/measurement-and-delivery.md).
-- Contact, booking, and newsletter forms are intentionally demo-only: native
-  browser validation runs, then JavaScript prevents network submission and shows a
-  local confirmation. If JavaScript is disabled, a hidden local `data:` fallback
-  target absorbs the POST and the page explains that no information is sent. No
-  form backend is implied.
-- The repo is intentionally excluded from the data-science project pins. It supports
-  applications that value web analytics, reporting, conversion measurement, and
-  cross-functional delivery.
+## What the work shows
 
-## Demonstrations
+- **Information architecture:** service, service-area, FAQ, reviews, booking, financing, emergency and blog pages, organized around the questions a homeowner asks before calling.
+- **Conversion paths:** calls to action in the header and hero, click-to-call phone links on every HVAC and pest-control page, and short quote and booking forms.
+- **Responsive design:** mobile-first CSS with a distinct visual system per brand (type, color, imagery) and a collapsible mobile menu.
+- **Accessibility and SEO basics:** semantic landmarks, document language, unique titles and meta descriptions, and descriptive alt text on every image.
+- **Measurement plan:** a consent-aware GA4 event contract (`form_start`, `generate_lead`, `select_cta`) with controlled-vocabulary parameters and a pre-launch QA checklist, in [`docs/measurement-and-delivery.md`](docs/measurement-and-delivery.md).
+- **Automated quality gate:** [`scripts/validate_static_sites.py`](scripts/validate_static_sites.py) checks every page for required metadata, image alt text, broken local links and assets, and stray credentials or local paths. It runs in GitHub Actions on every push.
 
-| Site | Business brief | Pages | Source preview |
-|---|---|---:|---|
-| **Green Horizons** | Landscaping and lawn care | 8 | [`green-horizons/index.html`](green-horizons/index.html) |
-| **Climate Pro** | HVAC: heating, cooling, and emergency service | 16 | [`climate-pro/index.html`](climate-pro/index.html) |
-| **Shield Pest** | Residential pest control | 4 | [`shield-pest/index.html`](shield-pest/index.html) |
+## Repository structure
 
-The source previews work from a local static server or a static-host deployment.
-The former `datadesigndynamics.org/demos/...` URLs are not presented as live
-portfolio links because their current deployment status has not been verified.
-
-## What the work demonstrates
-
-### Product and delivery
-
-- Brief-to-site translation for local-service audiences
-- Page hierarchy and navigation across service, FAQ, service-area, review, contact,
-  booking, financing, and emergency flows
-- Conversion-oriented calls to action with clear next steps
-- Reusable layout and component patterns implemented without a page builder
-
-### Front-end implementation
-
-- Semantic HTML with document language, titles, descriptions, landmarks, and
-  descriptive image alternatives
-- Responsive, mobile-first CSS with a separate visual system for each brand
-- Lightweight static delivery: no framework runtime, build step, or hidden service
-  dependency is required
-- Local assets and relative links suitable for static hosting
-
-### Measurement-ready handoff
-
-- Form and CTA surfaces are identifiable without sending form contents to analytics
-- Page taxonomy supports reporting by site, page type, and conversion surface
-- The repository documents a privacy-safe event contract, ownership boundaries, and
-  a pre-launch QA checklist rather than claiming unverified traffic or ROI
+```text
+green-horizons/        # 8 pages, styles.css, assets/
+climate-pro/           # 16 pages, styles.css, assets/
+shield-pest/           # 4 pages, styles.css, assets/
+scripts/
+  demo-forms.js            # local-only form confirmation
+  validate_static_sites.py # quality gate
+docs/
+  measurement-and-delivery.md
+  screenshots/
+```
 
 ## Run locally
-
-Python's standard-library server is sufficient; there is no package installation or
-build step.
 
 ```bash
 python3 -m http.server 8000
 # open http://localhost:8000/green-horizons/
-```
-
-Run the deterministic quality gate from the repository root:
-
-```bash
 python3 scripts/validate_static_sites.py
 ```
 
-The validator checks every HTML page for required metadata, image alternatives,
-local asset/link integrity, and accidental credentials or machine-local paths. It
-also reports page counts for the three demonstrations. Remote deployment checks
-remain a release-owner responsibility because this repository does not control the
-hosting account.
+No install or build step is needed.
 
-## License and reuse
+## Notes
 
-The code is provided for portfolio review. Do not treat the fictional business
-content, imagery, testimonials, or contact details as real-world claims. See
-[`LICENSE`](LICENSE) for the code-usage terms.
-
----
-
-Built for Data Design Dynamics as a demonstration portfolio. No client-confidential
-information is included.
+- The businesses, people, testimonials, phone numbers and addresses are fictional.
+- Forms validate in the browser and show a local confirmation. Nothing is sent anywhere, with or without JavaScript.
+- No analytics tags are included. The measurement plan describes what an owner would add after consent is set up.
+- Code is MIT-licensed; images and brand content aren't licensed for reuse. See [`LICENSE`](LICENSE).
