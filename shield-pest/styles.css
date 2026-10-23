@@ -226,10 +226,13 @@ p {
   align-items: center;
 }
 
+.site-nav > .container { width: 100%; }
+
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
   width: 100%;
 }
 
@@ -241,6 +244,7 @@ p {
 }
 
 .nav-logo-text {
+  white-space: nowrap;
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 700;
