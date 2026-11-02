@@ -1,6 +1,6 @@
 # Web Design Demos
 
-Three responsive marketing sites for fictional local-service businesses, each designed around how a customer finds, compares and contacts a provider. Together they show information architecture, conversion paths and a measurement plan ready for analytics.
+Three responsive marketing sites for fictional local-service businesses, each designed around how a customer finds, compares and contacts a provider. Together they show information architecture and conversion paths.
 
 | Green Horizons (landscaping) | Climate Control Pro (HVAC) | Shield Pest Solutions (pest control) |
 |---|---|---|
@@ -13,7 +13,6 @@ Three responsive marketing sites for fictional local-service businesses, each de
 - **Conversion paths:** calls to action in the header and hero, click-to-call phone links on every HVAC and pest-control page, and short quote and booking forms.
 - **Responsive design:** mobile-first CSS with a distinct visual system per brand (type, color, imagery) and a collapsible mobile menu.
 - **Accessibility and SEO basics:** semantic landmarks, document language, unique titles and meta descriptions, and descriptive alt text on every image.
-- **Measurement plan:** a consent-aware GA4 event contract (`form_start`, `generate_lead`, `select_cta`) with controlled-vocabulary parameters and a pre-launch QA checklist, in [`docs/measurement-and-delivery.md`](docs/measurement-and-delivery.md).
 - **Automated quality gate:** [`scripts/validate_static_sites.py`](scripts/validate_static_sites.py) checks every page for required metadata, image alt text, broken local links and assets, and stray credentials or local paths. It runs in GitHub Actions on every push.
 
 ## Repository structure
@@ -26,7 +25,6 @@ scripts/
   demo-forms.js            # local-only form confirmation
   validate_static_sites.py # quality gate
 docs/
-  measurement-and-delivery.md
   screenshots/
 ```
 
@@ -44,5 +42,5 @@ No install or build step is needed.
 
 - The businesses, people, testimonials, phone numbers and addresses are fictional.
 - Forms validate in the browser and show a local confirmation. Nothing is sent anywhere, with or without JavaScript.
-- No analytics tags are included. The measurement plan describes what an owner would add after consent is set up.
+- No analytics tags are included.
 - Code is MIT-licensed; images and brand content aren't licensed for reuse. See [`LICENSE`](LICENSE).
